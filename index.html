@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Card Hover Effect</title>
+    <style>
+        *{
+            margin:o;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           
+            background-image: linear-gradient(240deg,black ,rgb(137, 130, 130) );
+        
+        }
+        
+        img{
+            width: 300ox;
+            height: 200px;
+            width:100%;
+        }
+        
+       
+        .container{
+            display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  margin-left: 120px;
+        }
+        h1{
+            font-family:cursive;
+            font-weight: 800;
+            font-size: 60px;
+            text-align: center;
+            letter-spacing: 10px;
+            animation-name: example;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+        @keyframes example{
+            0%   {color: rgb(255, 106, 0);font-size: 60px;}
+  25%  {color: rgb(208, 255, 0);font-size: 55px;}
+  50%  {color: rgb(0, 229, 255);font-size: 60px;}
+  100% {color: rgb(157, 0, 209);font-size: 55px;}
+        }
+
+        .item{
+            position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 200px;
+  perspective: 1000px;
+            
+        }
+        .pic{
+            position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  overflow: hidden;
+  
+  background-size: cover;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  will-change: transform;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out; 
+        }
+       
+  
+ 
+
+
+.item:hover .pic {
+  transform: rotateX(7deg) translateY(-6px);
+  box-shadow: 8px 8px 7px rgb(82, 78, 78),-8px -8px 7px rgb(63, 63, 63);
+}
+.item:hover .pic::after {
+  transform: translateY(0%);
+  box-shadow: 8px 8px 7px rgb(89, 89, 89),-8px -8px 7px rgb(89, 89, 89);
+}
+
+
+  
+
+.item:hover::before {
+  opacity: 0.6;
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+           
+        
+    </style>
+    </head>
+    <body>
+        <h1>GAME HOVER</h1>
+        <div class="container">
+           <div class="item">
+            <div class="pic"><img src="img/eight.jpg" ></div>
+
+           </div>
+        
+        
+        <div class="item">
+            <div class="pic"><img src="img/eleven.jpg" ></div>
+
+           </div>
+        
+
+        <div class="item">
+            <div class="pic"><img src="img/five.webp" ></div>
+
+           </div>
+        
+
+        <div class="item">
+            <div class="pic"><img src="img/four.jpg" ></div>
+
+           </div>
+       
+
+        <div class="item">
+            <div class="pic"><img src="img/nine.jpg" ></div>
+
+           </div>
+       
+
+        <div class="item">
+            <div class="pic"><img src="img/seven.jpg" ></div>
+
+           </div>
+        
+
+        <div class="item">
+            <div class="pic"><img src="img/six.jpg" ></div>
+
+           </div>
+      
+
+        <div class="item">
+            <div class="pic"><img src="img/ten.jpg" ></div>
+
+           </div>
+
+           <div class="item">
+            <div class="pic"><img src="img/gamw.jpg" ></div>
+
+           </div>
+        </div>
+       
+
+    </body>
+    </html>
